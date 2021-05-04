@@ -107,6 +107,19 @@ void WireguardManagerLib::WireguardManager::add_interface(const std::string& nam
 	file.close();
 }
 
+void WireguardManagerLib::WireguardManager::update_interface(const std::string& name, const std::string& config)
+{
+	auto path = std::filesystem::path(*options.wg_config_path);
+	path /= name + ".conf"; // concat...
+
+	if (!std::filesystem::exists(path))
+		throw std::exception("Interface doesn't exists");
+
+	std::ofstream file(path.generic_string(), std::ios::trunc);
+	file << config;
+	file.close();
+}
+
 void WireguardManagerLib::WireguardManager::delete_interface(const std::string& name)
 {
 	auto path = std::filesystem::path(*options.wg_config_path);

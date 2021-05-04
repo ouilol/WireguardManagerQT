@@ -23,6 +23,8 @@ namespace WireguardManagerLib {
 
 		void add_interface(const std::string& name, const std::string& config);
 
+		void update_interface(const std::string& name, const std::string& config);
+
 		void delete_interface(const std::string& name);
 
 		std::vector<std::string> get_wg_config_file_names();
