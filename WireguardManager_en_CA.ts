@@ -48,6 +48,16 @@
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="mainwindow.ui" line="153"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="162"/>
+        <source>Add Tunnel</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>NewTunnelDialog</name>

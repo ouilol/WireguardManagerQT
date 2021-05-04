@@ -11,8 +11,8 @@
 #include <array>
 #include <algorithm>
 
-std::string&& exec(const char* cmd);
-std::string&& trim_start(const std::string& str);
+std::string exec(const char* cmd);
+std::string trim_start(const std::string& str);
 
 void WireguardManagerLib::WireguardManager::initialize()
 {
@@ -24,13 +24,18 @@ void WireguardManagerLib::WireguardManager::initialize()
 
 	if (!std::filesystem::exists(*options.wg_path))
 		throw std::exception("Provided Wireguard Path (wg_path) does not exist");
+
+    if (!options.wg_config_path.has_value())
+        options.wg_config_path = "C:\Program Files\WireGuard\Data\Configurations";
 #else
 	if (!options.wg_path.has_value())
 		options.wg_path = "wg"; // on linux, wg can already be found in the path
+    if (!options.wg_config_path.has_value())
+        options.wg_config_path = "/etc/wireguard"; // on linux, wg can already be found in the path
 #endif
 }
 
-std::vector<WireguardManagerLib::interface_values>&& WireguardManagerLib::WireguardManager::query_wg()
+std::vector<WireguardManagerLib::interface_values> WireguardManagerLib::WireguardManager::query_wg()
 {
 	std::vector<WireguardManagerLib::interface_values> interfaces;
 
@@ -72,10 +77,10 @@ std::vector<WireguardManagerLib::interface_values>&& WireguardManagerLib::Wiregu
 	return std::move(interfaces);
 }
 
-std::vector<std::string>&& WireguardManagerLib::WireguardManager::query_wg_raw()
+std::vector<std::string> WireguardManagerLib::WireguardManager::query_wg_raw()
 {
 
-	const auto& rawStr = exec(options.wg_path->data());
+    const auto rawStr = std::move(exec(options.wg_path->data()));
 
 	std::stringstream strStream(rawStr);
 
@@ -94,7 +99,7 @@ std::vector<std::string>&& WireguardManagerLib::WireguardManager::query_wg_raw()
 
 	return std::move(lines);
 }
-std::string&& trim_start(const std::string& str)
+std::string trim_start(const std::string& str)
 {
 	// we have a line, let's just remove the junk spaces and tabs in the beginning of the line
 	// there's no "Trim()" in c++ so, here we goddam go:
@@ -109,7 +114,7 @@ std::string&& trim_start(const std::string& str)
 	return std::string();
 }
 
-std::string&& exec(const char* cmd) {
+std::string exec(const char* cmd) {
 	std::array<char, 128> buffer;
 	std::string result;
 
@@ -125,4 +130,13 @@ std::string&& exec(const char* cmd) {
 		result += buffer.data();
 	}
 	return std::move(result);
+}
+
+std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_file()
+{
+    std::vector<std::string> result;
+    for(const auto & entry : std::filesystem::directory_iterator(*options.wg_config_path))
+        result.push_back(entry.path());
+
+    return std::move(result);
 }

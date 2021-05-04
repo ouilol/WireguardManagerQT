@@ -10,8 +10,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //wg_manager.initialize();
-    //auto test = wg_manager.query_wg();
+    wg_manager.initialize();
+    auto configs = wg_manager.get_wg_config_file();
+    auto test = wg_manager.query_wg();
 }
 
 MainWindow::~MainWindow()
