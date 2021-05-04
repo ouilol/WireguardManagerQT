@@ -5,3 +5,5 @@
 /out/build/x64-Debug
 /.vs
 /build
+*.user.*
+*.user

@@ -132,15 +132,29 @@ std::string exec(const char* cmd) {
 	return std::move(result);
 }
 
+bool hasEnding (std::string const &fullString, std::string const &ending) {
+    if (fullString.length() >= ending.length()) 
+	{
+	    return (0 == fullString.compare (fullString.length() - ending.length(), ending.length(), ending));
+    } 
+	else 
+	{
+        return false;
+    }
+}
+
 std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_file()
 {
     std::vector<std::string> result;
     for(const auto & entry : std::filesystem::directory_iterator(*options.wg_config_path))
     {
+
 		std::string v;
-		for (char c : entry.path().u8string())
+		for (char c : entry.path().filename().u8string())
 			v += c;
-        result.push_back(v);
+
+		if(hasEnding(v,".conf"))
+	        result.push_back(v.substr(0,v.length() - 5));
     }
 
     return std::move(result);
