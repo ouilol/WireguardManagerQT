@@ -10,6 +10,7 @@
 #include <string>
 #include <array>
 #include <algorithm>
+#include <fstream>
 
 std::string exec(const char* cmd);
 std::string trim_start(const std::string& str);
@@ -25,13 +26,13 @@ void WireguardManagerLib::WireguardManager::initialize()
 	if (!std::filesystem::exists(*options.wg_path))
 		throw std::exception("Provided Wireguard Path (wg_path) does not exist");
 
-    if (!options.wg_config_path.has_value())
-        options.wg_config_path = "C:\\Program Files\\WireGuard\\Data\\Configurations";
+	if (!options.wg_config_path.has_value())
+		options.wg_config_path = "C:\\Program Files\\WireGuard\\Data\\Configurations";
 #else
 	if (!options.wg_path.has_value())
 		options.wg_path = "wg"; // on linux, wg can already be found in the path
-    if (!options.wg_config_path.has_value())
-        options.wg_config_path = "/etc/wireguard"; // on linux, wg can already be found in the path
+	if (!options.wg_config_path.has_value())
+		options.wg_config_path = "/etc/wireguard"; // on linux, wg can already be found in the path
 #endif
 }
 
@@ -52,7 +53,7 @@ std::vector<WireguardManagerLib::interface_values> WireguardManagerLib::Wireguar
 
 		std::string left(line->begin(), separator);
 		std::string right(separator + 1, line->end());
-        right = trim_start(right);
+		right = trim_start(right);
 
 
 		if (left == "interface") // found the line for the interface
@@ -60,7 +61,7 @@ std::vector<WireguardManagerLib::interface_values> WireguardManagerLib::Wireguar
 			current_interface = &interfaces.emplace_back(interface_values());
 			current_peer = nullptr; // in a new interface, we're not changing another interface's peer
 
-            current_interface->set_name(std::move(right));
+			current_interface->set_name(std::move(right));
 		}
 		else if (left == "peer" && current_interface != nullptr)
 		{
@@ -74,13 +75,13 @@ std::vector<WireguardManagerLib::interface_values> WireguardManagerLib::Wireguar
 			(*current_interface)[std::move(left)] = std::move(right);
 	}
 
-	return std::move(interfaces);
+	return interfaces;
 }
 
 std::vector<std::string> WireguardManagerLib::WireguardManager::query_wg_raw()
 {
 
-    const auto rawStr = std::move(exec(options.wg_path->data()));
+	const auto rawStr = std::move(exec(options.wg_path->data()));
 
 	std::stringstream strStream(rawStr);
 
@@ -97,7 +98,7 @@ std::vector<std::string> WireguardManagerLib::WireguardManager::query_wg_raw()
 			lines.emplace_back(std::move(segment_trimmed));
 	}
 
-	return std::move(lines);
+	return lines;
 }
 std::string trim_start(const std::string& str)
 {
@@ -114,6 +115,45 @@ std::string trim_start(const std::string& str)
 	return std::string();
 }
 
+inline bool hasEnding(const std::string& fullString, const std::string& ending) {
+	if (fullString.length() >= ending.length())
+		return (0 == fullString.compare(fullString.length() - ending.length(), ending.length(), ending));
+	else
+		return false;
+}
+
+std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_file_names()
+{
+	std::vector<std::string> configs;
+	for (const auto& entry : std::filesystem::directory_iterator(*options.wg_config_path))
+	{
+		std::string path = entry.path().filename().generic_string();
+
+#ifdef WIN32
+		if (hasEnding(path, ".conf.dpapi"))
+			configs.push_back(path.substr(0, path.length() - 11));
+#else
+		if (hasEnding(v, ".conf"))
+			result.push_back(v.substr(0, v.length() - 5));
+#endif
+	}
+
+	return configs;
+}
+
+std::string WireguardManagerLib::WireguardManager::get_wg_config(const std::string& interface_name)
+{
+	auto path = std::filesystem::path(*options.wg_config_path);
+	path /= interface_name + ".conf"; // concat...
+
+	std::ifstream file(path.generic_string());
+	std::stringstream buffer;
+	buffer << file.rdbuf();
+
+	return buffer.str();
+}
+
+
 std::string exec(const char* cmd) {
 	std::array<char, 128> buffer;
 	std::string result;
@@ -129,33 +169,5 @@ std::string exec(const char* cmd) {
 	while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
 		result += buffer.data();
 	}
-	return std::move(result);
-}
-
-bool hasEnding (std::string const &fullString, std::string const &ending) {
-    if (fullString.length() >= ending.length()) 
-	{
-	    return (0 == fullString.compare (fullString.length() - ending.length(), ending.length(), ending));
-    } 
-	else 
-	{
-        return false;
-    }
-}
-
-std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_file()
-{
-    std::vector<std::string> result;
-    for(const auto & entry : std::filesystem::directory_iterator(*options.wg_config_path))
-    {
-
-		std::string v;
-		for (char c : entry.path().filename().u8string())
-			v += c;
-
-		if(hasEnding(v,".conf"))
-	        result.push_back(v.substr(0,v.length() - 5));
-    }
-
-    return std::move(result);
+	return result;
 }
