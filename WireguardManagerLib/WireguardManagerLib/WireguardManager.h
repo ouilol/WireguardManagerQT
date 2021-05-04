@@ -21,6 +21,8 @@ namespace WireguardManagerLib {
 
 		interface_values wg_show(const std::string& interface_name);
 
+		void add_interface(const std::string& name, const std::string& config);
+
 		std::vector<std::string> get_wg_config_file_names();
 
 		std::string get_wg_config(const std::string& interface_name);

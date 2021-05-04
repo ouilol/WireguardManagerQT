@@ -93,9 +93,22 @@ WireguardManagerLib::interface_values WireguardManagerLib::WireguardManager::wg_
 	return *interface_found;
 }
 
+void WireguardManagerLib::WireguardManager::add_interface(const std::string& name, const std::string& config)
+{
+	auto path = std::filesystem::path(*options.wg_config_path);
+	path /= name + ".conf"; // concat...
+
+	if (std::filesystem::exists(path))
+		throw std::exception("Interface already exists");
+
+
+	std::ofstream file(name);
+	file << config;
+	file.close();
+}
+
 std::vector<std::string> WireguardManagerLib::WireguardManager::query_wg_raw()
 {
-
 	const auto rawStr = std::move(exec(options.wg_path->data()));
 
 	std::stringstream strStream(rawStr);
