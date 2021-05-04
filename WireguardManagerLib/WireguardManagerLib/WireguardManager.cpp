@@ -102,9 +102,20 @@ void WireguardManagerLib::WireguardManager::add_interface(const std::string& nam
 		throw std::exception("Interface already exists");
 
 
-	std::ofstream file(name);
+	std::ofstream file(path.generic_string());
 	file << config;
 	file.close();
+}
+
+void WireguardManagerLib::WireguardManager::delete_interface(const std::string& name)
+{
+	auto path = std::filesystem::path(*options.wg_config_path);
+	path /= name + ".conf"; // concat...
+
+	if (!std::filesystem::exists(path))
+		return;
+
+	std::filesystem::remove(path);
 }
 
 std::vector<std::string> WireguardManagerLib::WireguardManager::query_wg_raw()
