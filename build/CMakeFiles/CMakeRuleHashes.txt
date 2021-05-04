@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+3eb9dab3da8bab3835d18cc8482e2a68 CMakeFiles/WireguardManager_autogen

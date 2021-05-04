@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/ouilol/Projets/WireguardManager/WireguardManager/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ouilol/Projets/WireguardManager/WireguardManager/build -I/home/ouilol/Projets/WireguardManager/WireguardManager -I/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++2a -o CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp",
+  "file": "/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/home/ouilol/Projets/WireguardManager/WireguardManager/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ouilol/Projets/WireguardManager/WireguardManager/build -I/home/ouilol/Projets/WireguardManager/WireguardManager -I/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++2a -o CMakeFiles/WireguardManager.dir/main.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/main.cpp",
+  "file": "/home/ouilol/Projets/WireguardManager/WireguardManager/main.cpp"
+},
+{
+  "directory": "/home/ouilol/Projets/WireguardManager/WireguardManager/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ouilol/Projets/WireguardManager/WireguardManager/build -I/home/ouilol/Projets/WireguardManager/WireguardManager -I/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++2a -o CMakeFiles/WireguardManager.dir/mainwindow.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/mainwindow.cpp",
+  "file": "/home/ouilol/Projets/WireguardManager/WireguardManager/mainwindow.cpp"
+},
+{
+  "directory": "/home/ouilol/Projets/WireguardManager/WireguardManager/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ouilol/Projets/WireguardManager/WireguardManager/build -I/home/ouilol/Projets/WireguardManager/WireguardManager -I/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++2a -o CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/newtunneldialog.cpp",
+  "file": "/home/ouilol/Projets/WireguardManager/WireguardManager/newtunneldialog.cpp"
+},
+{
+  "directory": "/home/ouilol/Projets/WireguardManager/WireguardManager/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ouilol/Projets/WireguardManager/WireguardManager/build -I/home/ouilol/Projets/WireguardManager/WireguardManager -I/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++2a -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp",
+  "file": "/home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp"
+},
+{
+  "directory": "/home/ouilol/Projets/WireguardManager/WireguardManager/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ouilol/Projets/WireguardManager/WireguardManager/build -I/home/ouilol/Projets/WireguardManager/WireguardManager -I/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++2a -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp",
+  "file": "/home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp"
+},
+{
+  "directory": "/home/ouilol/Projets/WireguardManager/WireguardManager/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ouilol/Projets/WireguardManager/WireguardManager/build -I/home/ouilol/Projets/WireguardManager/WireguardManager -I/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++2a -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp",
+  "file": "/home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp"
+}
+]

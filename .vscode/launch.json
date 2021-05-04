@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "preLaunchTask": "build",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/WireguardManager",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "miDebuggerPath": "/home/ouilol/gdb",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "visualizerFile": "/home/ouilol/.config/Code/User/workspaceStorage/829a740c5db7f8657608bc9037c66a8f/tonka3000.qtvsctools/qt.natvis.xml"
+        }
+    ]
+}
