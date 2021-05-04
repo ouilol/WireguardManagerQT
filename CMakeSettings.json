@@ -1,0 +1,48 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "intelliSenseMode": "windows-msvc-x64",
+      "variables": [
+        {
+          "name": "Qt5Core_DIR",
+          "value": "D:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5Core",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5EglSupport_DIR",
+          "value": "D:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5EglSupport",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5Network_DIR",
+          "value": "D:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5Network",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5Zlib_DIR",
+          "value": "D:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5Zlib",
+          "type": "PATH"
+        },
+        {
+          "name": "QT_DIR",
+          "value": "D:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5",
+          "type": "PATH"
+        },
+        {
+          "name": "Qt5_DIR",
+          "value": "D:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5",
+          "type": "PATH"
+        }
+      ]
+    }
+  ]
+}

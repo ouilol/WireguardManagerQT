@@ -20,6 +20,11 @@ namespace WireguardManagerLib {
         std::vector<interface_values> query_wg();
         std::vector<std::string> get_wg_config_file();
 
+
+        WireguardManagerOptions& get_options()
+        {
+            return options;
+        }
 	private:
 
         std::vector<std::string> query_wg_raw();
