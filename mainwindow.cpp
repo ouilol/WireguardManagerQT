@@ -1,6 +1,10 @@
+#include <qstringlistmodel.h>
+
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "newtunneldialog.h"
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -14,12 +18,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     wg_manager.initialize();
     auto configs = wg_manager.get_wg_config_file();
-    auto test = wg_manager.query_wg();
+    //auto test = wg_manager.query_wg();
 
-    ui->lstTunnel->model()->insertRow(0);
-    auto index = ui->lstTunnel->model()->index(0,0);
-    ui->lstTunnel->model()->setData(index,QString::fromStdString(configs[0]));
+    auto model = new QStringListModel();
+    ui->lstTunnel->setModel(model);
 
+    for (const auto& config : configs)
+    {
+        model->insertRow(model->rowCount());
+        auto index = ui->lstTunnel->model()->index(model->rowCount() - 1, 0);
+        ui->lstTunnel->model()->setData(index, QString::fromStdString(config));
+    }
 }
 
 MainWindow::~MainWindow()
