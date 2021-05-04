@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    wg_manager.get_options().wg_path = "C:\\Program Files\\WireGuard\\wg.exe";
     wg_manager.initialize();
     auto configs = wg_manager.get_wg_config_file();
     auto test = wg_manager.query_wg();

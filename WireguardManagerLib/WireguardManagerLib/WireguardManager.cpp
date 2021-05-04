@@ -26,7 +26,7 @@ void WireguardManagerLib::WireguardManager::initialize()
 		throw std::exception("Provided Wireguard Path (wg_path) does not exist");
 
     if (!options.wg_config_path.has_value())
-        options.wg_config_path = "C:\Program Files\WireGuard\Data\Configurations";
+        options.wg_config_path = "C:\\Program Files\\WireGuard\\Data\\Configurations";
 #else
 	if (!options.wg_path.has_value())
 		options.wg_path = "wg"; // on linux, wg can already be found in the path
@@ -52,7 +52,7 @@ std::vector<WireguardManagerLib::interface_values> WireguardManagerLib::Wireguar
 
 		std::string left(line->begin(), separator);
 		std::string right(separator + 1, line->end());
-		right = std::move(trim_start(right));
+        right = trim_start(right);
 
 
 		if (left == "interface") // found the line for the interface
@@ -136,7 +136,12 @@ std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_fi
 {
     std::vector<std::string> result;
     for(const auto & entry : std::filesystem::directory_iterator(*options.wg_config_path))
-        result.push_back(entry.path());
+    {
+		std::string v;
+		for (char c : entry.path().u8string())
+			v += c;
+        result.push_back(v);
+    }
 
     return std::move(result);
 }
