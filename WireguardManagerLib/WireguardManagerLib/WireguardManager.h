@@ -19,20 +19,7 @@ namespace WireguardManagerLib {
 
 		std::vector<interface_values> wg_show();
 
-		interface_values wg_show(const std::string& interface_name)
-		{
-			auto interfaces = wg_show();
-
-			auto interface_found = std::find_if(std::begin(interfaces), std::end(interfaces), [&](const interface_values& current)
-			{
-				return current.get_name() == interface_name;
-			});
-
-			if (interface_found == std::end(interfaces))
-				return interface_values();
-
-			return *interface_found;
-		}
+		interface_values wg_show(const std::string& interface_name);
 
 		std::vector<std::string> get_wg_config_file_names();
 

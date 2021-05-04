@@ -78,6 +78,21 @@ std::vector<WireguardManagerLib::interface_values> WireguardManagerLib::Wireguar
 	return interfaces;
 }
 
+WireguardManagerLib::interface_values WireguardManagerLib::WireguardManager::wg_show(const std::string& interface_name)
+{
+	auto interfaces = wg_show();
+
+	auto interface_found = std::find_if(std::begin(interfaces), std::end(interfaces), [&](const interface_values& current)
+	{
+		return current.get_name() == interface_name;
+	});
+
+	if (interface_found == std::end(interfaces))
+		return interface_values();
+
+	return *interface_found;
+}
+
 std::vector<std::string> WireguardManagerLib::WireguardManager::query_wg_raw()
 {
 
