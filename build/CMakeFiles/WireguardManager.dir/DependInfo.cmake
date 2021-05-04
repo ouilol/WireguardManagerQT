@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp" "/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o"
-  "/home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp" "/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o"
-  "/home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp" "/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o"
-  "/home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp" "/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o"
-  "/home/ouilol/Projets/WireguardManager/WireguardManager/main.cpp" "/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles/WireguardManager.dir/main.cpp.o"
-  "/home/ouilol/Projets/WireguardManager/WireguardManager/mainwindow.cpp" "/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles/WireguardManager.dir/mainwindow.cpp.o"
-  "/home/ouilol/Projets/WireguardManager/WireguardManager/newtunneldialog.cpp" "/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o"
+  "/home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp" "/home/ouilol/Projets/WireguardManager/build/CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o"
+  "/home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp" "/home/ouilol/Projets/WireguardManager/build/CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o"
+  "/home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp" "/home/ouilol/Projets/WireguardManager/build/CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o"
+  "/home/ouilol/Projets/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp" "/home/ouilol/Projets/WireguardManager/build/CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o"
+  "/home/ouilol/Projets/WireguardManager/main.cpp" "/home/ouilol/Projets/WireguardManager/build/CMakeFiles/WireguardManager.dir/main.cpp.o"
+  "/home/ouilol/Projets/WireguardManager/mainwindow.cpp" "/home/ouilol/Projets/WireguardManager/build/CMakeFiles/WireguardManager.dir/mainwindow.cpp.o"
+  "/home/ouilol/Projets/WireguardManager/newtunneldialog.cpp" "/home/ouilol/Projets/WireguardManager/build/CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

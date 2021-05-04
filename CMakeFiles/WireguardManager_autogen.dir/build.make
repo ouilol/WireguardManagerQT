@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ouilol/Projets/WireguardManager/WireguardManager
+CMAKE_SOURCE_DIR = /home/ouilol/Projets/WireguardManager
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ouilol/Projets/WireguardManager/WireguardManager
+CMAKE_BINARY_DIR = /home/ouilol/Projets/WireguardManager
 
 # Utility rule file for WireguardManager_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/ouilol/Projets/WireguardManager/WireguardManager
 include CMakeFiles/WireguardManager_autogen.dir/progress.make
 
 CMakeFiles/WireguardManager_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target WireguardManager"
-	/usr/bin/cmake -E cmake_autogen /home/ouilol/Projets/WireguardManager/WireguardManager/CMakeFiles/WireguardManager_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ouilol/Projets/WireguardManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target WireguardManager"
+	/usr/bin/cmake -E cmake_autogen /home/ouilol/Projets/WireguardManager/CMakeFiles/WireguardManager_autogen.dir/AutogenInfo.json ""
 
 WireguardManager_autogen: CMakeFiles/WireguardManager_autogen
 WireguardManager_autogen: CMakeFiles/WireguardManager_autogen.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/WireguardManager_autogen.dir/clean:
 .PHONY : CMakeFiles/WireguardManager_autogen.dir/clean
 
 CMakeFiles/WireguardManager_autogen.dir/depend:
-	cd /home/ouilol/Projets/WireguardManager/WireguardManager && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ouilol/Projets/WireguardManager/WireguardManager /home/ouilol/Projets/WireguardManager/WireguardManager /home/ouilol/Projets/WireguardManager/WireguardManager /home/ouilol/Projets/WireguardManager/WireguardManager /home/ouilol/Projets/WireguardManager/WireguardManager/CMakeFiles/WireguardManager_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ouilol/Projets/WireguardManager && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ouilol/Projets/WireguardManager /home/ouilol/Projets/WireguardManager /home/ouilol/Projets/WireguardManager /home/ouilol/Projets/WireguardManager /home/ouilol/Projets/WireguardManager/CMakeFiles/WireguardManager_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/WireguardManager_autogen.dir/depend
 

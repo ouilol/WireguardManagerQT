@@ -1,4 +1,4 @@
-/home/ouilol/Projets/WireguardManager/WireguardManager/CMakeFiles/rebuild_cache.dir
-/home/ouilol/Projets/WireguardManager/WireguardManager/CMakeFiles/edit_cache.dir
-/home/ouilol/Projets/WireguardManager/WireguardManager/CMakeFiles/WireguardManager.dir
-/home/ouilol/Projets/WireguardManager/WireguardManager/CMakeFiles/WireguardManager_autogen.dir
+/home/ouilol/Projets/WireguardManager/CMakeFiles/rebuild_cache.dir
+/home/ouilol/Projets/WireguardManager/CMakeFiles/edit_cache.dir
+/home/ouilol/Projets/WireguardManager/CMakeFiles/WireguardManager.dir
+/home/ouilol/Projets/WireguardManager/CMakeFiles/WireguardManager_autogen.dir

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ouilol/Projets/WireguardManager/WireguardManager
+CMAKE_SOURCE_DIR = /home/ouilol/Projets/WireguardManager
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ouilol/Projets/WireguardManager/WireguardManager/build
+CMAKE_BINARY_DIR = /home/ouilol/Projets/WireguardManager/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/WireguardManager.dir/depend.make
@@ -59,94 +59,94 @@ include CMakeFiles/WireguardManager.dir/flags.make
 
 CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o: CMakeFiles/WireguardManager.dir/flags.make
 CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o: WireguardManager_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.o -c /home/ouilol/Projets/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp
 
 CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp > CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp > CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp -o CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/build/WireguardManager_autogen/mocs_compilation.cpp -o CMakeFiles/WireguardManager.dir/WireguardManager_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/WireguardManager.dir/main.cpp.o: CMakeFiles/WireguardManager.dir/flags.make
 CMakeFiles/WireguardManager.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/WireguardManager.dir/main.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/main.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/WireguardManager.dir/main.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/main.cpp.o -c /home/ouilol/Projets/WireguardManager/main.cpp
 
 CMakeFiles/WireguardManager.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WireguardManager.dir/main.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManager/main.cpp > CMakeFiles/WireguardManager.dir/main.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/main.cpp > CMakeFiles/WireguardManager.dir/main.cpp.i
 
 CMakeFiles/WireguardManager.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WireguardManager.dir/main.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManager/main.cpp -o CMakeFiles/WireguardManager.dir/main.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/main.cpp -o CMakeFiles/WireguardManager.dir/main.cpp.s
 
 CMakeFiles/WireguardManager.dir/mainwindow.cpp.o: CMakeFiles/WireguardManager.dir/flags.make
 CMakeFiles/WireguardManager.dir/mainwindow.cpp.o: ../mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WireguardManager.dir/mainwindow.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/mainwindow.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WireguardManager.dir/mainwindow.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/mainwindow.cpp.o -c /home/ouilol/Projets/WireguardManager/mainwindow.cpp
 
 CMakeFiles/WireguardManager.dir/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WireguardManager.dir/mainwindow.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManager/mainwindow.cpp > CMakeFiles/WireguardManager.dir/mainwindow.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/mainwindow.cpp > CMakeFiles/WireguardManager.dir/mainwindow.cpp.i
 
 CMakeFiles/WireguardManager.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WireguardManager.dir/mainwindow.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManager/mainwindow.cpp -o CMakeFiles/WireguardManager.dir/mainwindow.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/mainwindow.cpp -o CMakeFiles/WireguardManager.dir/mainwindow.cpp.s
 
 CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o: CMakeFiles/WireguardManager.dir/flags.make
 CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o: ../newtunneldialog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/newtunneldialog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.o -c /home/ouilol/Projets/WireguardManager/newtunneldialog.cpp
 
 CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManager/newtunneldialog.cpp > CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/newtunneldialog.cpp > CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.i
 
 CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManager/newtunneldialog.cpp -o CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/newtunneldialog.cpp -o CMakeFiles/WireguardManager.dir/newtunneldialog.cpp.s
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o: CMakeFiles/WireguardManager.dir/flags.make
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o: ../WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp > CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp > CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.i
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManager.cpp.s
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o: CMakeFiles/WireguardManager.dir/flags.make
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o: ../WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp > CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp > CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.i
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/WireguardManagerLib.cpp.s
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o: CMakeFiles/WireguardManager.dir/flags.make
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o: ../WireguardManagerLib/WireguardManagerLib/pch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ouilol/Projets/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.o -c /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp > CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp > CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.i
 
 CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ouilol/Projets/WireguardManager/WireguardManagerLib/WireguardManagerLib/pch.cpp -o CMakeFiles/WireguardManager.dir/WireguardManagerLib/WireguardManagerLib/pch.cpp.s
 
 # Object files for target WireguardManager
 WireguardManager_OBJECTS = \
@@ -173,7 +173,7 @@ WireguardManager: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 WireguardManager: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 WireguardManager: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 WireguardManager: CMakeFiles/WireguardManager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable WireguardManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ouilol/Projets/WireguardManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable WireguardManager"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WireguardManager.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -186,6 +186,6 @@ CMakeFiles/WireguardManager.dir/clean:
 .PHONY : CMakeFiles/WireguardManager.dir/clean
 
 CMakeFiles/WireguardManager.dir/depend:
-	cd /home/ouilol/Projets/WireguardManager/WireguardManager/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ouilol/Projets/WireguardManager/WireguardManager /home/ouilol/Projets/WireguardManager/WireguardManager /home/ouilol/Projets/WireguardManager/WireguardManager/build /home/ouilol/Projets/WireguardManager/WireguardManager/build /home/ouilol/Projets/WireguardManager/WireguardManager/build/CMakeFiles/WireguardManager.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ouilol/Projets/WireguardManager/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ouilol/Projets/WireguardManager /home/ouilol/Projets/WireguardManager /home/ouilol/Projets/WireguardManager/build /home/ouilol/Projets/WireguardManager/build /home/ouilol/Projets/WireguardManager/build/CMakeFiles/WireguardManager.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/WireguardManager.dir/depend
 
