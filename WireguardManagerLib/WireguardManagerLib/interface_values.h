@@ -10,6 +10,11 @@ namespace WireguardManagerLib
 	{
 	public:
 
+		bool empty() const
+		{
+			return get_name().empty() && peers.empty();
+		}
+
 		const std::string& get_name()const
 		{
 			return name;

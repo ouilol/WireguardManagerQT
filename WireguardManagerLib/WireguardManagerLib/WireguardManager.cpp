@@ -36,7 +36,7 @@ void WireguardManagerLib::WireguardManager::initialize()
 #endif
 }
 
-std::vector<WireguardManagerLib::interface_values> WireguardManagerLib::WireguardManager::query_wg()
+std::vector<WireguardManagerLib::interface_values> WireguardManagerLib::WireguardManager::wg_show()
 {
 	std::vector<WireguardManagerLib::interface_values> interfaces;
 
