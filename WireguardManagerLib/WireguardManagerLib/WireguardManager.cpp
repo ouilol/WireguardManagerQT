@@ -12,6 +12,7 @@
 #include <algorithm>
 #include <fstream>
 
+
 std::string exec(const char* cmd);
 std::string trim_start(const std::string& str);
 
@@ -96,10 +97,10 @@ WireguardManagerLib::interface_values WireguardManagerLib::WireguardManager::wg_
 void WireguardManagerLib::WireguardManager::add_interface(const std::string& name, const std::string& config)
 {
 	auto path = std::filesystem::path(*options.wg_config_path);
-	path /= name + ".conf"; // concat...
+    path /= name + ".conf"; // concat...
 
 	if (std::filesystem::exists(path))
-		throw std::exception("Interface already exists");
+        throw std::runtime_error("Interface already exists");
 
 
 	std::ofstream file(path.generic_string());
@@ -113,7 +114,7 @@ void WireguardManagerLib::WireguardManager::update_interface(const std::string& 
 	path /= name + ".conf"; // concat...
 
 	if (!std::filesystem::exists(path))
-		throw std::exception("Interface doesn't exists");
+        throw std::runtime_error("Interface doesn't exists");
 
 	std::ofstream file(path.generic_string(), std::ios::trunc);
 	file << config;
@@ -133,7 +134,7 @@ void WireguardManagerLib::WireguardManager::delete_interface(const std::string& 
 
 std::vector<std::string> WireguardManagerLib::WireguardManager::query_wg_raw()
 {
-	const auto rawStr = std::move(exec(options.wg_path->data()));
+    const auto rawStr = exec(options.wg_path->data());
 
 	std::stringstream strStream(rawStr);
 
@@ -185,8 +186,8 @@ std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_fi
 		if (hasEnding(path, ".conf.dpapi"))
 			configs.push_back(path.substr(0, path.length() - 11));
 #else
-		if (hasEnding(v, ".conf"))
-			result.push_back(v.substr(0, v.length() - 5));
+        if (hasEnding(path, ".conf"))
+            configs.push_back(path.substr(0, path.length() - 5));
 #endif
 	}
 

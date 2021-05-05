@@ -30,7 +30,7 @@
      <attribute name="title">
       <string>Tunnels</string>
      </attribute>
-     <widget class="QListView" name="lstTunnel">
+     <widget class="QTreeView" name="lstTunnel">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -38,9 +38,6 @@
         <width>221</width>
         <height>451</height>
        </rect>
-      </property>
-      <property name="modelColumn">
-       <number>0</number>
       </property>
      </widget>
      <widget class="QGroupBox" name="grpInterface">
