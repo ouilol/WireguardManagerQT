@@ -1,13 +1,19 @@
 #include "newtunneldialog.h"
 #include "ui_newtunneldialog.h"
 
-NewTunnelDialog::NewTunnelDialog(QWidget *parent) :
-    wg_manager(WireguardManagerLib::WireguardManagerOptions()),
+NewTunnelDialog::NewTunnelDialog(WireguardManagerLib::WireguardManager& manager,std::optional<std::string> name,QWidget *parent) :
+    wg_manager(manager),
     QDialog(parent),
     ui(new Ui::NewTunnelDialog)
 {
     ui->setupUi(this);
-    wg_manager.initialize();
+
+    if(name.has_value())
+    {
+        ui->plainTextEdit->setPlainText(QString::fromStdString(wg_manager.get_wg_config(*name)));
+        ui->txtInterfaceName->setText(QString::fromStdString(*name));
+    }
+
 }
 
 NewTunnelDialog::~NewTunnelDialog()
@@ -17,5 +23,9 @@ NewTunnelDialog::~NewTunnelDialog()
 
 void NewTunnelDialog::on_buttonBox_accepted()
 {
-    wg_manager.add_interface(ui->txtInterfaceName->toPlainText().toStdString(),ui->plainTextEdit->toPlainText().toStdString());
+    std::string interface = ui->txtInterfaceName->toPlainText().toStdString();
+    if(wg_manager.has_config_file(interface))
+        wg_manager.update_interface(interface,ui->plainTextEdit->toPlainText().toStdString());
+    else
+        wg_manager.add_interface(interface,ui->plainTextEdit->toPlainText().toStdString());
 }

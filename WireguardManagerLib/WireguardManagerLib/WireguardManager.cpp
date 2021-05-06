@@ -175,7 +175,7 @@ inline bool hasEnding(const std::string& fullString, const std::string& ending) 
 		return false;
 }
 
-std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_file_names()
+std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_file_names() const
 {
 	std::vector<std::string> configs;
 	for (const auto& entry : std::filesystem::directory_iterator(*options.wg_config_path))
@@ -194,7 +194,7 @@ std::vector<std::string> WireguardManagerLib::WireguardManager::get_wg_config_fi
 	return configs;
 }
 
-std::string WireguardManagerLib::WireguardManager::get_wg_config(const std::string& interface_name)
+std::string WireguardManagerLib::WireguardManager::get_wg_config(const std::string& interface_name) const
 {
 	auto path = std::filesystem::path(*options.wg_config_path);
 	path /= interface_name + ".conf"; // concat...
@@ -204,6 +204,12 @@ std::string WireguardManagerLib::WireguardManager::get_wg_config(const std::stri
 	buffer << file.rdbuf();
 
 	return buffer.str();
+}
+
+bool WireguardManagerLib::WireguardManager::has_config_file(const std::string& interface_name) const
+{
+    auto configs = get_wg_config_file_names();
+    return std::find(configs.begin(),configs.end(),interface_name) != configs.end();
 }
 
 

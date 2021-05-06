@@ -27,9 +27,11 @@ namespace WireguardManagerLib {
 
 		void delete_interface(const std::string& name);
 
-		std::vector<std::string> get_wg_config_file_names();
+        std::vector<std::string> get_wg_config_file_names() const;
 
-		std::string get_wg_config(const std::string& interface_name);
+        std::string get_wg_config(const std::string& interface_name) const;
+
+        bool has_config_file(const std::string& interface_name) const;
 
 
 		WireguardManagerOptions& get_options()

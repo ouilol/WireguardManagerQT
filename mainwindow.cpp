@@ -1,6 +1,6 @@
 #include <qstringlistmodel.h>
 #include <qstandarditemmodel.h>
-
+#include <qmessagebox.h>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -36,7 +36,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_cmdNew_clicked()
 {
-    NewTunnelDialog newTunnel;
+    NewTunnelDialog newTunnel(wg_manager,ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString().toStdString()) ;
+    //newTunnel.interface_name = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString().toStdString();
     newTunnel.setModal(true);
     newTunnel.exec();
     if(!newTunnel.isActiveWindow())
@@ -74,8 +75,12 @@ void MainWindow::on_lstTunnel_clicked(const QModelIndex &index)
 
 void MainWindow::on_cmdRemove_clicked()
 {
-
-    auto interface_name = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString().toStdString();
-    wg_manager.delete_interface(interface_name);
-    refresh_tunnel_list();
+    QMessageBox::StandardButton reply;
+    auto interface_name = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString();
+    reply = QMessageBox::question(this,"Warning",QString("Are you shure you want to delete %1").arg(interface_name),QMessageBox::Yes|QMessageBox::No);
+    if(reply == QMessageBox::Yes)
+    {
+        wg_manager.delete_interface(interface_name.toStdString());
+        refresh_tunnel_list();
+    }
 }
