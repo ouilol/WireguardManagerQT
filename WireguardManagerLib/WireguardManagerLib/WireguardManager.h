@@ -33,6 +33,8 @@ namespace WireguardManagerLib {
 
         bool has_config_file(const std::string& interface_name) const;
 
+        void start_wg(const std::string& name) const;
+
 
 		WireguardManagerOptions& get_options()
 		{

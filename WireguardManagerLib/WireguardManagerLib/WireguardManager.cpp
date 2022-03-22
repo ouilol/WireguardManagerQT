@@ -11,6 +11,7 @@
 #include <array>
 #include <algorithm>
 #include <fstream>
+#include <QProcess>
 
 
 std::string exec(const char* cmd);
@@ -229,4 +230,11 @@ std::string exec(const char* cmd) {
 		result += buffer.data();
 	}
 	return result;
+}
+
+void WireguardManagerLib::WireguardManager::start_wg(const std::string &name) const
+{
+    QProcess process;
+    process.start("wg-quick",QStringList()<<"up"<< QString::fromStdString(name));
+    process.waitForFinished(-1);
 }

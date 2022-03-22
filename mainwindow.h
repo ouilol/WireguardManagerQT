@@ -21,7 +21,8 @@ private slots:
     void on_cmdNew_clicked();
     void refresh_tunnel_list();
     void on_lstTunnel_clicked(const QModelIndex &index);
-
+    void on_cmdActivate_clicked();
+    void on_cmdEdit_clicked();
     void on_cmdRemove_clicked();
 
 private:

@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    wg_manager.get_options().wg_path = "C:\\Program Files\\WireGuard\\wg.exe";
+    wg_manager.get_options().wg_path = "wg";
 
     wg_manager.initialize();
     //auto test = wg_manager.query_wg();
@@ -36,8 +36,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_cmdNew_clicked()
 {
-    NewTunnelDialog newTunnel(wg_manager,ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString().toStdString()) ;
-    //newTunnel.interface_name = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString().toStdString();
+    NewTunnelDialog newTunnel(wg_manager,std::nullopt);
     newTunnel.setModal(true);
     newTunnel.exec();
     if(!newTunnel.isActiveWindow())
@@ -71,6 +70,7 @@ void MainWindow::refresh_tunnel_list()
 void MainWindow::on_lstTunnel_clicked(const QModelIndex &index)
 {
     ui->cmdRemove->setEnabled(true);
+    ui->txtInterface->setPlainText(QString::fromStdString(wg_manager.get_wg_config(index.data(Qt::DisplayRole).toString().toStdString())));
 }
 
 void MainWindow::on_cmdRemove_clicked()
@@ -83,4 +83,32 @@ void MainWindow::on_cmdRemove_clicked()
         wg_manager.delete_interface(interface_name.toStdString());
         refresh_tunnel_list();
     }
+}
+
+void MainWindow::on_cmdEdit_clicked()
+{
+    auto selectedVPN = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString().toStdString();
+    NewTunnelDialog newTunnel(wg_manager,selectedVPN) ;
+    newTunnel.setModal(true);
+    newTunnel.exec();
+    if(!newTunnel.isActiveWindow())
+    {
+        refresh_tunnel_list();
+        ui->txtInterface->setPlainText(QString::fromStdString(wg_manager.get_wg_config(selectedVPN)));
+    }
+}
+
+void MainWindow::on_cmdActivate_clicked()
+{
+    auto status = wg_manager.wg_show();
+    if(!status.empty())
+    {
+        Q_FOREACH(auto &interfacen, status.data()->get_name() )
+        {
+
+        }
+    }
+
+    auto selectedVPN = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString().toStdString();
+    wg_manager.start_wg(selectedVPN);
 }
