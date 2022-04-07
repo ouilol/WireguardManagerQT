@@ -35,6 +35,7 @@ namespace WireguardManagerLib {
 
         void start_wg(const std::string& name) const;
 
+        void stop_wg(const std::string& name) const;
 
 		WireguardManagerOptions& get_options()
 		{

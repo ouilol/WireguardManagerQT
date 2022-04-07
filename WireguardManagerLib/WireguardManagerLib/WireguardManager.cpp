@@ -238,3 +238,10 @@ void WireguardManagerLib::WireguardManager::start_wg(const std::string &name) co
     process.start("wg-quick",QStringList()<<"up"<< QString::fromStdString(name));
     process.waitForFinished(-1);
 }
+
+void WireguardManagerLib::WireguardManager::stop_wg(const std::string &name) const
+{
+    QProcess process;
+    process.start("wg-quick",QStringList()<<"down"<< QString::fromStdString(name));
+    process.waitForFinished(-1);
+}

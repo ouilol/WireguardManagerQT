@@ -24,9 +24,11 @@ private slots:
     void on_cmdActivate_clicked();
     void on_cmdEdit_clicked();
     void on_cmdRemove_clicked();
+    bool CheckIfActivated(QString &instanceName);
 
 private:
     Ui::MainWindow *ui;
     WireguardManagerLib::WireguardManager wg_manager;
+
 };
 #endif // MAINWINDOW_H

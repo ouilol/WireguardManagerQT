@@ -58,10 +58,14 @@ void MainWindow::refresh_tunnel_list()
         lst_tunnel_data.push_back(*new tunnel_data{false,QString::fromStdString(config)});
 
     QList<QStandardItem*> rowData;
-    Q_FOREACH(const auto &item , lst_tunnel_data)
+    for(auto &item : lst_tunnel_data)
     {
         rowData.clear();
-        rowData << new QStandardItem(item.status);
+        if(CheckIfActivated(item.name))
+            rowData << new QStandardItem("UP");
+        else
+            rowData << new QStandardItem("DOWN");
+
         rowData << new QStandardItem(item.name);
         model->appendRow(rowData);
     }
@@ -69,8 +73,22 @@ void MainWindow::refresh_tunnel_list()
 
 void MainWindow::on_lstTunnel_clicked(const QModelIndex &index)
 {
-    ui->cmdRemove->setEnabled(true);
     ui->txtInterface->setPlainText(QString::fromStdString(wg_manager.get_wg_config(index.data(Qt::DisplayRole).toString().toStdString())));
+    auto interface_name = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString();
+    if(CheckIfActivated(interface_name))
+    {
+        ui->cmdActivate->setText("Desactivate");
+        ui->cmdRemove->setEnabled(false);
+        ui->txtInterface->setEnabled(false);
+    }
+    else
+    {
+        ui->cmdActivate->setText("Activate");
+        ui->cmdRemove->setEnabled(true);
+        ui->txtInterface->setEnabled(true);
+    }
+
+
 }
 
 void MainWindow::on_cmdRemove_clicked()
@@ -100,15 +118,40 @@ void MainWindow::on_cmdEdit_clicked()
 
 void MainWindow::on_cmdActivate_clicked()
 {
+     auto selectedVPN = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString();
+    if(CheckIfActivated(selectedVPN))
+    {
+        wg_manager.stop_wg(selectedVPN.toStdString());
+        ui->cmdActivate->setText("Activate");
+        ui->lstTunnel->model()->setData(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),0),"DOWN"); // or refresh tunnel list ????? ***********************
+        ui->cmdRemove->setEnabled(true);
+        ui->txtInterface->setEnabled(true);
+    }
+    else
+    {
+        wg_manager.start_wg(selectedVPN.toStdString());
+        ui->cmdActivate->setText("Desactivate");
+        ui->lstTunnel->model()->setData(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),0),"UP"); // or refresh tunnel list ????? ***********************
+        ui->cmdRemove->setEnabled(false);
+        ui->txtInterface->setEnabled(false);
+
+    }
+
+
+
+}
+
+bool MainWindow::CheckIfActivated(QString &instanceName)
+{
     auto status = wg_manager.wg_show();
     if(!status.empty())
     {
-        Q_FOREACH(auto &interfacen, status.data()->get_name() )
+        for(auto &interface: status)
         {
-
+            auto instance = interface.get_name();
+            if(instance == instanceName.toStdString())
+                return true;
         }
     }
-
-    auto selectedVPN = ui->lstTunnel->model()->data(ui->lstTunnel->model()->index(ui->lstTunnel->currentIndex().row(),1)).toString().toStdString();
-    wg_manager.start_wg(selectedVPN);
+    return false;
 }
